@@ -1,0 +1,12 @@
+{
+  "test_set": [
+    {
+      "transcript": "./test_set/transcript_1.txt",
+      "ground_truth": "./test_set/ground_truth_1.txt"
+    },
+    {
+      "transcript": "./test_set/transcript_2.txt",
+      "ground_truth": "./test_set/ground_truth_2.txt"
+    }
+  ]
+}

@@ -1,8 +1,14 @@
 import json
 import csv
 from jiwer import wer, cer
+from pythainlp.util import normalize
 from pythainlp.tokenize import word_tokenize
+from spelling_number import numbers2grapheme
 
+def th_normalize(text: str):
+    norm_text = normalize(text)
+    norm_text = numbers2grapheme(norm_text, spl_token=" ")
+    return norm_text
 
 def tokenize(text: str):
     word_tokenized_list = map(
@@ -10,8 +16,8 @@ def tokenize(text: str):
     arr_words = list(filter(lambda x: x != "" and x !=
                      " " and x != "\n", word_tokenized_list))
     joined_words = " ".join(arr_words)
-    return joined_words
-
+    norm_text = th_normalize(joined_words)
+    return norm_text
 
 res = []
 

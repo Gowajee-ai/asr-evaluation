@@ -44,6 +44,10 @@ example:
 ```sh
 python eval.py
 ```
+or (Run with Docker)
+```sh
+./script.sh
+```
 
 And then, evaluation reulst will show in `/results/result.csv`
 
